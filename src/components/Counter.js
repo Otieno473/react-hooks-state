@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(count + 1);
+import React,{useState} from "react";
+const Counter=()=>{
+      const [count,setcount]=useState(0);
+  function increment(){
+    setcount((currentCount)=>currentCount+1);
+    setcount((currentCount)=>currentCount+2);
+    
+  
   }
-
-  return <button onClick={increment}>I have been clicked {count} times</button>;
+  return(
+    <button onClick={increment}>I have been clicked {count}times</button>
+  )
 }
 
 export default Counter;
